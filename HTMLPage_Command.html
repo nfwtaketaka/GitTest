@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>GitBashコマンド</title>
+    <link rel="stylesheet" href="StyleSheet_Command.css" />
+</head>
+<body>
+    <h1>GitBashコマンド一覧</h1>
+    <div class="matter">
+        <div>
+            <h2>ディレクトリ</h2>
+            <table>
+                <tr>
+                    <td class="trClass">pwd</td>
+                    <td class="trClass"></td>
+                    <td class="trClass"></td>
+                    <td calss="trContetsClass">：絶対パスの出力</td>
+                </tr>
+                <tr>
+                    <td class="trClass">mkdir</td>
+                    <td class="trClass"></td>
+                    <td class="trClass">：[pass]</td>
+                    <td width="350" height="40">：新しいディレクトリを作成する</td>
+                </tr>
+                <tr>
+                    <td class="trClass">ls</td>
+                    <td class="trClass"></td>
+                    <td class="trClass"></td>
+                    <td calss="trContetsClass">：ディレクトリ内一覧</td>
+                </tr>
+                <tr>
+                    <td class="trClass">ls</td>
+                    <td class="trClass">：-a</td>
+                    <td class="trClass"></td>
+                    <td calss="trContetsClass">：ディレクトリ内の全てを表示</td>
+                </tr>
+                <tr>
+                    <td class="trClass">cd</td>
+                    <td class="trClass"></td>
+                    <td class="trClass">：/D</td>
+                    <td calss="trContetsClass">：pass先(\D)に移動</td>
+                </tr>
+                <tr>
+                    <td class="trClass">cd</td>
+                    <td class="trClass"></td>
+                    <td class="trClass">：../</td>
+                    <td calss="trContetsClass">：一つ上に移動</td>
+                </tr>
+            </table>
+            <h2>Git特有のコマンド(環境構築)</h2>
+            <p>
+                Gitの設定値一覧を確認<br />
+                $ git␣config␣--list<br />
+            </p>
+            <p>
+                特定の設定値を確認<br />
+                $ git␣config␣user.name<br />
+            </p>
+            <p>
+                エディターの確認<br />
+                $ git␣config␣core.editor<br />
+            </p>
+            <p>
+                Gitにユーザ名を設定するコマンド<br />
+                $ git␣config␣--global␣user.name␣****<br />
+            </p>
+            <p>
+                メールアドレスの登録<br />
+                $ git␣config␣--global␣user.email␣****<br />
+            </p>
+            <p>
+                利用するエディターの設定<br />
+                $ git␣config␣--global␣core.editor␣"code --wait"<br />
+                (システム環境変数にて変数名をcode、<br />
+                path(変数値)をvisual sutdioのフォルダをディレクトリにした)<br />
+            </p>
+            <p>
+                設定の削除<br />
+                $ git␣config␣--global␣--unset␣設定項目名<br />
+            </p>
+            <p>
+                プロキシ設定<br />
+                $ git␣config␣--global␣http.proxy␣*1:*2<br />
+                *1：プロキシサーバーURL(http://example.com)<br />
+                *2：ポート番号(8080)<br />
+            </p>
+            <p>
+                プロキシ認証<br />
+                $ git␣config␣--global␣http.proxy␣*1:*2@*3:*4<br />
+                *1：プロキシのユーザー名<br />
+                *2：パスワード<br />
+                *3：プロキシサーバーURL(http://example.com)<br />
+                *4：ポート番号(8080)<br />
+            </p>
+            <p>
+                標準ブランチ名の設定<br />
+                $ git␣config␣--global␣init.defaultBranch␣*1<br />
+                *1：デフォルトのブランチ名、master推奨<br />
+            </p>
+        </div>
+        <div>
+            <h2>Git特有のコマンド(ファイル操作)</h2>
+            <p>
+                ローカルリポジトリの作成<br />
+                $ git␣init<br />
+            </p>
+            <p>
+                init解除。initを登録したディレクトリにて、git initを取り消す<br />
+                $ rm␣-rf␣.git<br />
+            </p>
+            <p>
+                ステージングエリアに変更を登録する<br />
+                $ git␣add␣*　：* =ファイル<br />
+                $ git␣add␣. ：カレントdir以下全てのファイルを登録<br />
+                $ git␣add␣subDirectory ：sub以下の全てのファイルを登録<br />
+                $ git␣add␣subDirectory/file.md ：sub以下のfile.mdを登録<br />
+            </p>
+            <p>
+                コミットを作成する<br />
+                $ git␣commit<br />
+            </p>
+            <p>
+                Git管理下のファイルやディレクトリを削除<br />
+                $ git␣rm<br />
+            </p>
+            <p>
+                ワークツリーの変更を取り消す<br />
+                $ git␣checkout<br />
+            </p>
+            <p>
+                ステージングエリアに追加した変更をワークツリーに戻す<br />
+                $ git␣reset<br />
+            </p>
+            <p>
+                ローカルリポジトリの状態を確認する<br />
+                $ git␣status<br />
+            </p>
+            <p>
+                各エリアの差分を確認する<br />
+                $ git␣diff<br />
+            </p>
+            <p>
+                コミットの履歴を確認する<br />
+                $ git␣log<br />
+            </p>
+        </div>
+</body>
+</html>
